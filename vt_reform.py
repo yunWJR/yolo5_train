@@ -46,8 +46,8 @@ def reform(src_dir, out_dir):
         txts = txt.readlines()[0].split('\t')
 
         i_name = txts[0]
-        i_x = int(txts[1])
-        i_y = int(txts[2])
+        i_y = int(txts[1])
+        i_x = int(txts[2])
         i_w = int(txts[3])
         i_h = int(txts[4])
 
