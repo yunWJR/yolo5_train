@@ -56,20 +56,32 @@ names: ['xxx']
 其中，基于官方网络yolov5s.pt 继续训练
 
 ```sh
+# 从头训练-大量模型
+python train.py –data dataset.yaml --cfg  yolov5s.yaml --weights '' --batch-size 16
+
+# 小批量-基于模型继续训练
 python train.py –data dataset.yaml --cfg  yolov5s.yaml --weights yolov5s.pt --batch-size 16
 ```
 
 训练结果保存再 `run/train/exp*`下。
 
+模型配置：yolov5s.pt、yolov5m.pt、yolov5l.pt、yolov5x.pt
 
+
+
+2.4 可视化
+
+```
+pip install wandb
+```
+
+[https://wandb.ai](https://wandb.ai/site?utm_campaign=repo_yolo_traintutorial)
 
 ## 3、检测
 
 ```sh
 python detect.py --source inference/images/ --weights  best.pt
 ```
-
-
 
 
 
